@@ -1,0 +1,81 @@
+:root {
+    --point-color: rgb(247, 196, 55);
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    background-color: black;
+    color: white;
+}
+
+#header {
+    color : var(--point-color);
+    font-size: 25px;
+    font-weight: bolder;
+    border-bottom: 1px solid var(--point-color);
+    margin: 0px;
+    padding: 10px;
+    padding-bottom: 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    /* padding == margin ? */
+}
+
+.image img {
+    width: 300px;
+    height: auto;
+
+    /* 원형 테두리 */
+    border-radius: 50%;
+    border: 1px solid color-mix(in srgb, var(--point-color), transparent 20%);
+}
+
+h1 {
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    color: gray;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+table {
+    margin: 10px;
+    padding: 15px;
+    border: 0.1px solid color-mix(in srgb, var(--point-color), transparent 50%);
+    border-radius: 10px;
+
+    /* td 아래 선 연결되게 하는 방법 */
+    border-spacing: 0;
+}
+
+td {
+    border-bottom: 0.1px solid color-mix(in srgb, var(--point-color), transparent 50%);
+    padding: 10px;
+}
+
+tr:last-child td {
+    /* 마지막 row border 제거 */
+    border-bottom: none;
+}
+
+tbody tr td:nth-child(1) {
+    font-weight: bold;
+}
+
+tbody tr td:nth-child(2) {
+    color: gray;
+    text-align: end;
+}

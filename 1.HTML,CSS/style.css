@@ -1,0 +1,69 @@
+:root {
+    --point-color: rgb(247, 196, 55);
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    background-color: black;
+    color: white;
+}
+
+#header {
+    color : var(--point-color);
+    font-size: 25px;
+    font-weight: bolder;
+    border-bottom: 1px solid var(--point-color);
+    margin: 0px;
+    padding: 10px;
+    padding-bottom: 15px;
+}
+
+h2 {
+    font-size: 20px;
+    margin : 5px;
+}
+
+p {
+    font-size: 15px;
+    margin: 5px;
+    color: gray;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    max-width: 800px;
+    margin: 35px auto;
+    gap: 35px;
+    padding: 0 1%;
+
+    overflow: hidden;
+}
+
+.item {
+    padding : 5px;
+    border: 0.1px solid color-mix(in srgb, var(--point-color), transparent 50%);
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+
+    /* border 변화 부드럽게 */
+    transition: border-color 0.1s ease;
+}
+
+/* hover 중 투명도 낮추기 */
+.item:hover {
+    border-color: color-mix(in srgb, var(--point-color), transparent 0%);
+}
+
+.item img {
+    max-width: 70px;
+    height: auto;
+    margin: 10px;
+}
